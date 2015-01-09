@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 
 end
 
-#
+# #
 # Policeshootings.where(:city.ne => nil).each do |incident|
 #   @path = (URI.encode("https://maps.googleapis.com/maps/api/geocode/json?address=#{incident.city.gsub!(" ", "-")||incident.city}&components=country:US|administrative_area:#{incident.state[0..1]}"))
 #
