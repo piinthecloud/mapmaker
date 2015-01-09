@@ -1,0 +1,43 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+
+
+
+
+
+<!-- assign incidents as an attribute on an element
+data-attributes(hmtl)
+
+select map element with jquery, use method called 'data'  -->
+
+
+<div id="map">
+  <script type="text/javascript" src="us-states.js"></script>
+
+
+
+  <script>
+
+  var layer = new L.StamenTileLayer("toner");
+  var map = L.map('map').setView([37.8, -96], 4);
+  map.addLayer(layer);
+
+
+  <% @data.each do |incident| %>
+  L.marker([<%=incident.lat%>, <%=incident.lng%>]).addTo(map);
+  <% end %>
+
+
+  L.geoJson(statesData).addTo(map);
+
+
+
+  </script>
+
+</div>
+
+<% @data.each do |incident| %>
+<p><%= incident.city %><%= incident.state %></p>
+<p><%=  incident.lat %>,<%=  incident.lng %></p>
+<% end %>
