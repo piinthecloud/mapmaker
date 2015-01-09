@@ -23,13 +23,14 @@ select map element with jquery, use method called 'data'  -->
   var map = L.map('map').setView([37.8, -96], 4);
   map.addLayer(layer);
 
+  L.geoJson(statesData).addTo(map);
 
   <% @data.each do |incident| %>
   L.marker([<%=incident.lat%>, <%=incident.lng%>]).addTo(map);
   <% end %>
 
 
-  L.geoJson(statesData).addTo(map);
+
 
 
 
