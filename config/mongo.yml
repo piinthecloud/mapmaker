@@ -24,5 +24,5 @@ test:
 #   password: <%= ENV['MONGO_PASSWORD'] %>
 #
 
-  production:
-    uri: <%= ENV['MONGOHQ_URL'] %>
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %>
