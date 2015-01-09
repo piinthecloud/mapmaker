@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Policeshootings.destroy_all
+
 JSON.parse(File.read("public/data.json")).each do |x|
   Policeshootings.create( x )
 end
