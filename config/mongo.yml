@@ -17,8 +17,12 @@ test:
   w: 0
 
 # set these environment variables on your prod server
-production:
-  <<: *defaults
-  database: mapmaker
-  username: <%= ENV['MONGO_USERNAME'] %>
-  password: <%= ENV['MONGO_PASSWORD'] %>
+# production:
+#   <<: *defaults
+#   database: mapmaker
+#   username: <%= ENV['MONGO_USERNAME'] %>
+#   password: <%= ENV['MONGO_PASSWORD'] %>
+#
+
+  production:
+    uri: <%= ENV['MONGOHQ_URL'] %>
