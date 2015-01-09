@@ -9,3 +9,5 @@
 JSON.parse(File.read("public/data.json")).each do |x|
   Policeshootings.create( x )
 end
+
+Policeshootings.add_locations
