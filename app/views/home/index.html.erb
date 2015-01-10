@@ -43,14 +43,24 @@ select map element with jquery, use method called 'data'  -->
 
   // L.geoJson(statesData).addTo(map);
 
+
+
+
   <% @data.each do |incident| %>
+
 
   var circle = L.circle([<%=incident.lat%>, <%=incident.lng%>], 20, {
     color: 'black',
     fillColor: '#f03',
     fillOpacity: 0.5
 
-  }).addTo(map);
+
+  }).addTo(map)
+  .bindPopup("<%= incident.race %>");
+
+
+
+
   <% end %>
 
 
@@ -65,4 +75,5 @@ select map element with jquery, use method called 'data'  -->
 <% @data.each do |incident| %>
 <p><%= incident.city %><%= incident.state %></p>
 <p><%=  incident.lat %>,<%=  incident.lng %></p>
+<p><%= incident.race %></p>
 <% end %>
