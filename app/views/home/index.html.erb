@@ -1,9 +1,3 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-
-
-
-
 
 
 <!-- assign incidents as an attribute on an element
@@ -56,7 +50,7 @@ select map element with jquery, use method called 'data'  -->
 
 
   }).addTo(map)
-  .bindPopup("<%= incident.race %>");
+  .bindPopup("<p><%= incident.city %>, <%= incident.state %></p><p><%= incident.race  %></p>");
 
 
 

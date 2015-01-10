@@ -9,18 +9,58 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
+
  *= depend_on_asset "layers.png"
  *= depend_on_asset "layers-2x.png"
  *= require leaflet
+ *= require bootstrap.min
  *= require_tree .
  *= require_self
+
  */
+
+
+body {
+  margin: 20px;
+
+
+}
+
+.backsplash {
+  /*text-align: center;*/
+  color: white;
+  background: black;
+  padding:50px;
+  height: 160px;
+  margin:-20px;
+  margin-bottom: 40px;
+
+}
+
+.backsplash h1 {
+  font-size: 50px;
+  float: left;
+
+
+}
+
+.backsplash h5{
+  /*text-align: center;*/
+  color: white;
+  font-size: 20px;
+  float: left;
+  padding-top: 35px;
+
+
+}
+
+
 
 
 #map {
    width: 780px;
    height: 480px;
-   border: 1px;
-   border-color: pink;
+   margin-left: auto ;
+   margin-right: auto ;
 
 }
