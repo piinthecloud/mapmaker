@@ -24,7 +24,7 @@ Policeshootings.add_locations
 
 # Policeshootings.destroy_all
 #
-# JSON.parse(File.read("public/shooting_data.csv")).each do |x|
+# JSON.parse(File.read("public/us-states.json")).each do |x|
 #   Policeshootings.create( x )
 # end
 #
