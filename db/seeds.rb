@@ -1,15 +1,31 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+
+
+####This is how I was trying to work around it #######
 
 Policeshootings.destroy_all
 
-JSON.parse(File.read("public/data.json")).each do |x|
+CSV.parse("public/shooting_data.csv", :headers => true).each do |x|
   Policeshootings.create( x )
 end
 
 Policeshootings.add_locations
+
+
+
+
+### --**--**--**--**--**--**--**--**--**--**--**--**###
+
+##               This code works                     ##
+
+### --**--**--**--**--**--**--**--**--**--**--**--**###
+
+# Policeshootings.destroy_all
+#
+# JSON.parse(File.read("public/shooting_data.csv")).each do |x|
+#   Policeshootings.create( x )
+# end
+#
+# Policeshootings.add_locations
